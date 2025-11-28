@@ -17,13 +17,13 @@ const Header = () => {
               />
             </div>
             <nav className="space-x-6">
-              <Link href="" className="text-white hover:text-violet-900 transition duration-200">
+              <Link href="/" className="text-white hover:text-violet-900 transition duration-200">
                 À propos
               </Link>
-              <Link href="" className="text-white hover:text-violet-900 transition duration-200">
+              <Link href="/" className="text-white hover:text-violet-900 transition duration-200">
                 Projets
               </Link>
-              <Link href="" className="text-white hover:text-violet-900 transition duration-200">
+              <Link href="/" className="text-white hover:text-violet-900 transition duration-200">
                 Technologies
               </Link>
             </nav>

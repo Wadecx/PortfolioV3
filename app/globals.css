@@ -10,7 +10,7 @@
   --breakpoint-2xl: 1500px;
   --breakpoint-3xl: 1921px;
 
-  --color-primary: #ffffff;
+  --color-primary: #4D179A;
   --color-primary-darker: #ffffff;
   --color-primary-light: #ffffff;
 
@@ -49,6 +49,22 @@
 }
 
 :root {
+}
+
+@theme inline {
+  --animate-shine: shine var(--duration) infinite linear;
+
+  @keyframes shine {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    to {
+      background-position: 0% 0%;
+    }
+  }
 }
 
 h1,

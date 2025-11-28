@@ -3,7 +3,8 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { Link } from "next-view-transitions";
 import { PropsWithChildren } from "react";
 
-const buttonVariants = cva("", {
+
+const buttonVariants = cva("w-fit rounded-xl mt-12 hover:bg-[#631ecc] transition duration-300", {
   variants: {
     variant: {
       default: "bg-primary text-white  hover:shadow-md",
