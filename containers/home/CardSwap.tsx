@@ -32,16 +32,43 @@ export const CardSwapper = () => {
               <p className="text-white uppercase font-bold py-2 ml-4 flex items-center gap-2">
                 <FaCode /> Site
               </p>
+              <div>
+                <Image
+                  src="/assets/images/site.png"
+                  alt="Code Image"
+                  width={150}
+                  height={150}
+                  className="w-full max-h-[258px] object-cover rounded-b-[10px] opacity-80"
+                />
+              </div>
             </Card>
             <Card>
               <p className="text-white uppercase font-bold py-2 ml-4 flex items-center gap-2">
                 <RiRobot2Fill /> Automatisations
               </p>
+              <div>
+                <Image
+                  src="/assets/images/automatisation.png"
+                  alt="Code Image"
+                  width={150}
+                  height={150}
+                  className="w-full max-h-[258px] object-cover rounded-b-[10px] opacity-80"
+                />
+              </div>
             </Card>
             <Card>
               <p className="text-white uppercase font-bold py-2 ml-4 flex items-center gap-2">
                 <IoFlashOutline /> Reactivité
               </p>
+              <div>
+                <Image
+                  src="/assets/images/reactivite.png"
+                  alt="Code Image"
+                  width={150}
+                  height={150}
+                  className="w-full max-h-[258px] object-cover rounded-b-[10px] opacity-80"
+                />
+              </div>
             </Card>
           </CardSwap>
         </div>

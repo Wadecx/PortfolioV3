@@ -12,6 +12,7 @@ export const Heroheader = () => {
     words: [
       "Développeur Fullstack",
       "Créateur de projets web",
+      "Créateur de jeux vidéos",
       "Passionné par le code",
       "Heureux de vous rencontrer !",
     ],

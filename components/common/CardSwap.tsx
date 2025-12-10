@@ -82,7 +82,7 @@ const CardSwap: React.FC<CardSwapProps> = ({
   height = 300,
   cardDistance = 60,
   verticalDistance = 70,
-  delay = 5000,
+  delay = 1000,
   pauseOnHover = false,
   onCardClick,
   skewAmount = 6,
