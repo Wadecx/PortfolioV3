@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return <>
   <Heroheader />
-  <Loop />
   <CardSwapper/>
+  <Loop />
   </>;
 }
