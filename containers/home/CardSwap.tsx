@@ -7,7 +7,7 @@ import { RiRobot2Fill } from "react-icons/ri";
 
 export const CardSwapper = () => {
   return (
-    <Section>
+    <Section className="mb-[150px] md:mb-[200px]">
       <div className="flex justify-between max-w-[1200px] mx-auto items-center">
         <div className="flex flex-col gap-4">
           <h2 className="uppercase font-black  text-5xl text-primary">
