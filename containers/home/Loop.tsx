@@ -59,7 +59,7 @@ const techLogos = [
 
 export const Loop = () => {
   return (
-    <Section size="full" className="mt-0 md:mt-0 mb-0">
+    <Section size="full" className="mt-0 md:mt-0 mb-0" id="technologies">
       <h2 className="text-white uppercase font-black text-center mt-8 text-4xl">
         Stack technique
       </h2>

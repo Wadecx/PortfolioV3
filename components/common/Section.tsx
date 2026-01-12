@@ -1,7 +1,7 @@
 import { cn } from "@/libs/utils";
 import { PropsWithChildren } from "react";
 
-interface SectionProps {
+interface SectionProps extends React.HTMLAttributes<HTMLElement> {
   size?: "8/10" | "9/10" | "full";
   className?: string;
 }
@@ -10,6 +10,7 @@ export const Section = ({
   children,
   size = "8/10",
   className,
+  ...props
 }: PropsWithChildren<SectionProps>) => {
   return (
     <section
@@ -25,6 +26,7 @@ export const Section = ({
         "mx-auto mt-[50px] mb-[50px] md:mt-[150px] md:mb-[150px]",
         className
       )}
+      {...props}
     >
       {children}
     </section>

@@ -1,30 +1,51 @@
+"use client";
+
 import { Section } from "@/components";
 import CardSwap, { Card } from "@/components/common/CardSwap";
-import Image from "next/image";
 import { FaCode } from "react-icons/fa6";
 import { IoFlashOutline } from "react-icons/io5";
 import { RiRobot2Fill } from "react-icons/ri";
+import { useEffect, useState } from "react";
 
 export const CardSwapper = () => {
+  const [cardSize, setCardSize] = useState({ width: 400, height: 250 });
+
+  useEffect(() => {
+    const updateSize = () => {
+      if (window.innerWidth < 480) {
+        setCardSize({ width: 375, height: 220 });
+      } else if (window.innerWidth < 768) {
+        setCardSize({ width: 450, height: 270 });
+      } else {
+        setCardSize({ width: 500, height: 300 });
+      }
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
   return (
-    <Section className="mb-[150px] md:mb-[200px]">
-      <div className="flex justify-between max-w-[1200px] mx-auto items-center">
-        <div className="flex flex-col gap-4">
-          <h2 className="uppercase font-black  text-5xl text-primary">
+    <Section className="mb-[150px] md:mb-[200px] scroll-mt-70" id="about">
+      <div className="flex justify-between max-w-[1200px] lg:flex-row flex-col md:gap-5 gap-[50px] mx-auto lg:items-center items-center px-4 md:px-6">
+        <div className="flex flex-col gap-4 lg:w-1/2 w-full">
+          <h2 className="uppercase font-black  lg:text-5xl text-4xl text-primary">
             Pourquoi moi ?
           </h2>
-          <p className="text-white max-w-[50%] text-justify">
-            Je suis à l’écoute des besoins de chaque client et je prends le
-            temps de comprendre leurs objectifs afin de proposer des solutions
-            réellement adaptées. Flexible et réactif, je m’adapte facilement aux
-            contraintes et aux changements tout au long du projet pour garantir
-            un résultat en parfaite adéquation avec leurs attentes.
+          <p className="text-white lg:max-w-full text-justify">
+            Chaque projet commence par une vraie discussion. Je prends le temps
+            de comprendre vos objectifs pour vous proposer des solutions qui
+            collent à votre vision. Adaptable et disponible, je m'ajuste aux
+            imprévus pour livrer un résultat qui vous ressemble.
           </p>
         </div>
-        <div className="h-[300px] relative">
+        <div className="h-[300px] relative lg:w-1/2 w-full justify-center items-center lg:flex hidden">
           <CardSwap
+            width={cardSize.width}
+            height={cardSize.height}
             cardDistance={60}
-            verticalDistance={70}
+            verticalDistance={50}
             delay={5000}
             pauseOnHover={false}
           >
@@ -32,42 +53,28 @@ export const CardSwapper = () => {
               <p className="text-white uppercase font-bold py-2 ml-4 flex items-center gap-2">
                 <FaCode /> Site
               </p>
-              <div>
-                <Image
-                  src="/assets/images/site.png"
-                  alt="Code Image"
-                  width={150}
-                  height={150}
-                  className="w-full max-h-[258px] object-cover rounded-b-[10px] opacity-80"
-                />
+              <div className="p-4">
+                <p className="text-white">Sites web rapides et sur mesure</p>
               </div>
             </Card>
             <Card>
               <p className="text-white uppercase font-bold py-2 ml-4 flex items-center gap-2">
                 <RiRobot2Fill /> Automatisations
               </p>
-              <div>
-                <Image
-                  src="/assets/images/automatisation.png"
-                  alt="Code Image"
-                  width={150}
-                  height={150}
-                  className="w-full max-h-[258px] object-cover rounded-b-[10px] opacity-80"
-                />
+              <div className="p-4">
+                <p className="text-white">
+                  J'automatise vos tâches répétitives grâce a l'automatisation{" "}
+                </p>
               </div>
             </Card>
             <Card>
               <p className="text-white uppercase font-bold py-2 ml-4 flex items-center gap-2">
                 <IoFlashOutline /> Reactivité
               </p>
-              <div>
-                <Image
-                  src="/assets/images/reactivite.png"
-                  alt="Code Image"
-                  width={150}
-                  height={150}
-                  className="w-full max-h-[258px] object-cover rounded-b-[10px] opacity-80"
-                />
+              <div className="p-4">
+                <p className="text-white">
+                  Disponible et réactif sur vos projets
+                </p>
               </div>
             </Card>
           </CardSwap>

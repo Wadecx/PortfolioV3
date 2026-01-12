@@ -37,30 +37,30 @@ export const Heroheader = () => {
         />
       </div>
 
-      <div className="relative z-20 max-w-[1200px] w-full mx-auto min-h-[800px] flex flex-col md:flex-row items-center justify-between xl:mt-0 2xl:mt-24 gap-10 px-4">
+      <div className="relative z-20 max-w-[1200px] w-full mx-auto min-h-[800px] flex flex-col md:flex-row items-center lg:justify-between xl:mt-0 2xl:mt-24 lg:gap-8 md:gap-10 px-4 py-20 md:py-0">
         <div className="flex flex-col max-w-[650px]">
-          <h1 className="text-white xl:text-5xl md:text-6xl font-black uppercase mb-6 leading-tight">
+          <h1 className="text-white text-3xl text-4xl md:text-5xl xl:text-6xl font-black uppercase mb-6 leading-tight">
             Bonjour je suis <br />
             <span className="text-violet-900">MORCEL Tyron</span>
           </h1>
 
-          <div className="text-white text-2xl md:text-3xl flex gap-2">
+          <div className="text-white text-xl sm:text-2xl md:text-3xl flex gap-2 mb-6">
             <span>{text}</span>
             <Cursor cursorStyle="|" cursorColor="violet" />
           </div>
-          <Button href="/" className="flex items-center gap-2">
+          <Button href="/" className=" items-center gap-2 lg:flex hidden">
             <GrContact /> Me contacter
           </Button>
         </div>
 
         <NeonGradientCard borderSize={1}>
-          <div className="mt-12 md:mt-0 w-fit mx-auto">
+          <div className=" md:mt-0 w-fit mx-auto">
             <Image
               src="/assets/images/transparent1.png"
               alt="Photo de Tyron"
               width={500}
               height={520}
-              className="shadow-violet-900 rounded-2xl"
+              className="shadow-violet-900 rounded-2xl w-[400px] sm:w-[400px] md:w-[500px]"
             />
           </div>
         </NeonGradientCard>
