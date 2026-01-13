@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { Footer, Header } from "@/layouts";
 import type { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
@@ -37,6 +38,7 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
+          <Analytics />
         </body>
       </html>
     </ViewTransitions>
