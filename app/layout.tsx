@@ -5,8 +5,24 @@ import "./globals.css";
 import { fontVariables } from "@/libs/fonts";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Portfolio - Développeur Web",
+  description: "Portfolio professionnel présentant mes projets et compétences en développement web.",
+  keywords: ["portfolio", "développeur web", "développeur", "web", "projets"],
+  authors: [{ name: "Tyron Morcel" }],
+  openGraph: {
+    title: "Portfolio - Développeur Web",
+    description: "Portfolio professionnel présentant mes projets et compétences en développement web.",
+    type: "website",
+    locale: "fr_FR",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({
