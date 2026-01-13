@@ -6,6 +6,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { GrContact } from "react-icons/gr";
 import { NeonGradientCard } from "@/components/common/NeonGradiant";
 import Squares from "@/components/common/GridSquare";
+import { motion } from "motion/react";
 
 export const Heroheader = () => {
   const [text] = useTypewriter({
@@ -37,7 +38,13 @@ export const Heroheader = () => {
         />
       </div>
 
-      <div className="relative z-20 max-w-[1200px] w-full mx-auto min-h-[800px] flex flex-col md:flex-row items-center lg:justify-between xl:mt-0 2xl:mt-24 lg:gap-8 md:gap-10 px-4 py-20 md:py-0">
+      <motion.div
+        className="relative z-20 max-w-[1200px] w-full mx-auto min-h-[800px] flex flex-col md:flex-row items-center lg:justify-between xl:mt-0 2xl:mt-24 lg:gap-8 md:gap-10 px-4 py-20 md:py-0"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-100px" }}
+      >
         <div className="flex flex-col max-w-[650px]">
           <h1 className="text-white text-3xl text-4xl md:text-5xl xl:text-6xl font-black uppercase mb-6 leading-tight">
             Bonjour je suis <br />
@@ -64,7 +71,7 @@ export const Heroheader = () => {
             />
           </div>
         </NeonGradientCard>
-      </div>
+      </motion.div>
     </Section>
   );
 };

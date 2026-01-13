@@ -6,6 +6,7 @@ import { FaCode } from "react-icons/fa6";
 import { IoFlashOutline } from "react-icons/io5";
 import { RiRobot2Fill } from "react-icons/ri";
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 export const CardSwapper = () => {
   const [cardSize, setCardSize] = useState({ width: 400, height: 250 });
@@ -28,7 +29,13 @@ export const CardSwapper = () => {
 
   return (
     <Section className="mb-[150px] md:mb-[200px] scroll-mt-70" id="about">
-      <div className="flex justify-between max-w-[1200px] lg:flex-row flex-col md:gap-5 gap-[50px] mx-auto lg:items-center items-center px-4 md:px-6">
+      <motion.div
+        className="flex justify-between max-w-[1200px] lg:flex-row flex-col md:gap-5 gap-[50px] mx-auto lg:items-center items-center px-4 md:px-6"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-100px" }}
+      >
         <div className="flex flex-col gap-4 lg:w-1/2 w-full">
           <h2 className="uppercase font-black  lg:text-5xl text-4xl text-primary">
             Pourquoi moi ?
@@ -79,7 +86,7 @@ export const CardSwapper = () => {
             </Card>
           </CardSwap>
         </div>
-      </div>
+      </motion.div>
     </Section>
   );
 };

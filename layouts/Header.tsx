@@ -49,13 +49,23 @@ const Header = () => {
             </div>
             <nav className="lg:flex hidden space-x-6">
               {Links.map((link, id)=> (
-                <Link
+                <motion.div
                   key={id}
-                  href={link.href}
-                  className="text-white hover:text-violet-500 transition-colors duration-300"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: id * 0.1,
+                    ease: "easeOut"
+                  }}
                 >
-                  {link.name}
-                </Link>
+                  <Link
+                    href={link.href}
+                    className="text-white hover:text-violet-500 transition-colors duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
               ))}
             </nav>
             <div

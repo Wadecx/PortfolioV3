@@ -1,6 +1,9 @@
+"use client";
+
 import { Button, Section } from "@/components";
 import { NeonGradientCard } from "@/components/common/NeonGradiant";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 const projects = [
   {
@@ -29,7 +32,13 @@ const projects = [
 export const Projects = () => {
   return (
     <Section id="projects" className="scroll-mt-30">
-      <div className="flex flex-col gap-12 items-center">
+      <motion.div
+        className="flex flex-col gap-12 items-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-100px" }}
+      >
         <h2 className="uppercase font-black text-white text-4xl">
           mes projets
         </h2>
@@ -38,9 +47,9 @@ export const Projects = () => {
             <NeonGradientCard
               borderSize={2}
               borderRadius={20}
-              className="!h-full !w-full"
+              className="w-full"
             >
-              <div className="p-4 bg-white/1 flex flex-col gap-2 rounded-xl h-full">
+              <div className="p-4 bg-white/1 flex flex-col gap-2 rounded-xl h-full items-center">
                 <Image
                   src={project.imageUrl}
                   alt={project.description}
@@ -60,7 +69,7 @@ export const Projects = () => {
             </NeonGradientCard>
           ))}
         </div>
-      </div>
+      </motion.div>
     </Section>
   );
 };
