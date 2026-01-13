@@ -46,7 +46,7 @@ export const Heroheader = () => {
         viewport={{ once: true, margin: "-100px" }}
       >
         <div className="flex flex-col max-w-[650px]">
-          <h1 className="text-white text-3xl text-4xl md:text-5xl xl:text-6xl font-black uppercase mb-6 leading-tight">
+          <h1 className="text-white text-3xl lg:text-4xl md:text-5xl xl:text-6xl font-black uppercase mb-6 leading-tight">
             Bonjour je suis <br />
             <span className="text-violet-900">MORCEL Tyron</span>
           </h1>
@@ -55,9 +55,6 @@ export const Heroheader = () => {
             <span>{text}</span>
             <Cursor cursorStyle="|" cursorColor="violet" />
           </div>
-          <Button href="/" className=" items-center gap-2 lg:flex hidden">
-            <GrContact /> Me contacter
-          </Button>
         </div>
 
         <NeonGradientCard borderSize={1}>

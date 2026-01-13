@@ -1,5 +1,3 @@
-import { CookiesBanner, GoogleTagManager } from "@/components";
-import { GoogleConsentModeTag } from "@/components/tools/GoogleConsentModeTag";
 import { Footer, Header } from "@/layouts";
 import type { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
@@ -20,9 +18,6 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="fr">
         <body className={`${fontVariables} font-montserrat`}>
-          <GoogleConsentModeTag />
-          <CookiesBanner />
-          <GoogleTagManager gtmId="" />
           <Header />
           <main>{children}</main>
           <Footer />

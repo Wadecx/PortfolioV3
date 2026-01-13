@@ -48,6 +48,7 @@ export const Projects = () => {
               borderSize={2}
               borderRadius={20}
               className="w-full"
+              key={index}
             >
               <div className="p-4 bg-white/1 flex flex-col gap-2 rounded-xl h-full items-center">
                 <Image
