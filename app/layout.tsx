@@ -3,15 +3,18 @@ import type { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
 import "./globals.css";
 import { fontVariables } from "@/libs/fonts";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Portfolio - Développeur Web",
-  description: "Portfolio professionnel présentant mes projets et compétences en développement web.",
+  description:
+    "Portfolio professionnel présentant mes projets et compétences en développement web.",
   keywords: ["portfolio", "développeur web", "développeur", "web", "projets"],
   authors: [{ name: "Tyron Morcel" }],
   openGraph: {
     title: "Portfolio - Développeur Web",
-    description: "Portfolio professionnel présentant mes projets et compétences en développement web.",
+    description:
+      "Portfolio professionnel présentant mes projets et compétences en développement web.",
     type: "website",
     locale: "fr_FR",
   },
