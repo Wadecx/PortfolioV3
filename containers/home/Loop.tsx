@@ -73,7 +73,7 @@ export const Loop = () => {
         </h2>
         <div
           style={{ height: "200px", position: "relative", overflow: "hidden" }}
-          className="flex items-center"
+          className="items-center md:flex hidden"
         >
           <LogoLoop
             logos={techLogos}
@@ -81,6 +81,23 @@ export const Loop = () => {
             direction="right"
             logoHeight={70}
             gap={90}
+            hoverSpeed={0}
+            scaleOnHover
+            fadeOut
+            fadeOutColor="#060010"
+            ariaLabel="Technology partners"
+          />
+        </div>
+        <div
+          style={{ height: "200px", position: "relative", overflow: "hidden" }}
+          className="items-center md:hidden flex"
+        >
+          <LogoLoop
+            logos={techLogos}
+            speed={50}
+            direction="right"
+            logoHeight={40}
+            gap={50}
             hoverSpeed={0}
             scaleOnHover
             fadeOut
