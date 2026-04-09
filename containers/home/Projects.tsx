@@ -21,10 +21,10 @@ const projects = [
     link: "/projects/2",
   },
   {
-    title: "Godaim",
+    title: "Portfolio - Lisa VILELA",
     description:
-      "Outil d'entraînement pour améliorer sa précision et ses réflexes dans les jeux FPS. Propose différents modes d'exercice et un système de tracking de progression. Conçu pour optimiser les performances des joueurs compétitifs.",
-    imageUrl: "/assets/images/godaim.png",
+      "Portfolio professionnel de Lisa VILELA, artiste. Présentation de ses projets, compétences et expériences. Design moderne et responsive.",
+    imageUrl: "/assets/images/portfolio-lisa.jpg",
     link: "/projects/3",
   },
 ];
@@ -47,14 +47,14 @@ export const Projects = () => {
             <NeonGradientCard
               borderSize={2}
               borderRadius={20}
-              className="w-full"
+              className="w-full min-h-[450px]"
               key={index}
             >
-              <div className="p-4 bg-white/1 flex flex-col gap-2 rounded-xl h-full items-center">
+              <div className="p-4 flex flex-col gap-2 rounded-xl h-full items-center">
                 <Image
                   src={project.imageUrl}
                   alt={project.description}
-                  width={400}
+                  width={450}
                   height={0}
                   className="rounded-2xl p-0"
                 />

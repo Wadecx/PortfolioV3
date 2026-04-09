@@ -58,7 +58,7 @@ export const Heroheader = () => {
         </div>
 
         <NeonGradientCard borderSize={1}>
-          <div className=" md:mt-0 w-fit mx-auto">
+          <div className=" md:mt-0 w-fit mx-auto bg-black/50 rounded-3xl">
             <Image
               src="/assets/images/transparent1.png"
               alt="Photo de Tyron"
