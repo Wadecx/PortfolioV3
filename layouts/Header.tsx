@@ -95,7 +95,7 @@ const Header = () => {
                     key={id}
                     href={link.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-white text-2xl hover:text-violet-500 transition-colors duration-300"
+                    className="text-white text-2xl hover:text-violet-500 transition-colors duration-300 text-lg"
                   >
                     {link.name}
                   </Link>
