@@ -6,7 +6,7 @@ import { fontVariables } from "@/libs/fonts";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  title: "Portfolio - Développeur Web",
+  title: "Portfolio - D",
   description:
     "Portfolio professionnel présentant mes projets et compétences en développement web.",
   keywords: ["portfolio", "développeur web", "développeur", "web", "projets"],
