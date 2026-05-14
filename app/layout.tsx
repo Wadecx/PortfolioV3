@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { Footer, Header } from "@/layouts";
 import type { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
